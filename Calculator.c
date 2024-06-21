@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
   float answer;
 
   printf("Enter calculation:\n\n");
-  scanf("%f %c %f", &valueOne, &operator, & valueTwo);
+  scanf("%f%c%f", &valueOne, &operator, &valueTwo);
 
   switch(operator)
     {
@@ -27,6 +27,8 @@ int main(int argc, char *argv[])
     case '^': answer = pow(valueOne,valueTwo);
       break;
     case ' ': answer = sqrt(valueTwo);
+      break;
+    case '%': int a = valueOne; int b = valueTwo; int c = a%b; answer = c;
       break;
     default: goto fail;
     }
